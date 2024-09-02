@@ -2,8 +2,10 @@ from flask import Flask, render_template, redirect
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired, Email, Length
+from flask_bootstrap import Bootstrap4
 
 app = Flask(__name__)
+bootstrap = Bootstrap4(app)
 app.secret_key = "some secret string"
 
 class MyForm(FlaskForm):
